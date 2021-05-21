@@ -15,7 +15,7 @@ function Header() {
     const items = useSelector(selectItems);
 
     return (
-        <header>
+        <header className="sticky top-0 z-50">
             {/* Top Nav */}
             <div className="flex items-center bg-amazon_blue p-1 flex-grow py-2">
                 {/* Left - Logo */}
@@ -33,7 +33,7 @@ function Header() {
                 <div className="text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap">
                     <div onClick={!session ? signIn : signOut} className="link">
                         <p>
-                            {session ? `Hello, ${session.user.name}` : "Sign In"}
+                            {session ? `Hello, ${session.user.name}!` : "Sign In"}
                         </p>
                         <p className="font-extrabold md:text-sm">Account & Lists</p>
                     </div>
@@ -57,15 +57,15 @@ function Header() {
                     <MenuIcon className="h-6 mr-1" />
                     All
                 </p>
-                <p className="link">Prime Videos</p>
+                <p className="link">Prime Video</p>
                 <p className="link">Amazon Business</p>
-                <p className="link">Today's Deal</p>
+                <p className="link">Today's Deals</p>
                 <p className="link hidden lg:inline-flex">Electronics</p>
                 <p className="link hidden lg:inline-flex">Food & Grocery</p>
                 <p className="link hidden lg:inline-flex">Prime</p>
                 <p className="link hidden lg:inline-flex">Buy Again</p>
                 <p className="link hidden lg:inline-flex">Shopper Toolkit</p>
-                <p className="link hidden lg:inline-flex">Health & Personal Healthcare</p>
+                <p className="link hidden lg:inline-flex">Health & Personal Care</p>
             </div>
         </header>
     )
