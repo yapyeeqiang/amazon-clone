@@ -16,7 +16,6 @@ export default function Home({ products }) {
         <Banner />        
         <ProductFeed products={products}/>
       </main>
-
     </div>
   );
 }
